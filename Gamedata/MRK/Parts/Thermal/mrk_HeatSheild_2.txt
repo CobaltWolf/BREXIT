@@ -1,0 +1,51 @@
+PART
+{
+name = mrk-HeatSheildAlpha
+module = Part
+author = steedcrugeon
+
+MODEL
+{
+    model = MRK/Assets/mrk_HS-1
+}
+rescaleFactor = 1
+node_stack_top = 0.0, 0.0067, 0.0, 0, 1, 0, 2
+node_stack_mid = 0.0, -.0.025, 0.0, 0, -1, 0, 2
+node_stack_bottom = 0.0, -0.18, 0.0, 0, -1, 0, 2
+// -- characteristics ---
+CoPOffset = 0.0, 1.1, 0.0 // as per stock 2.5m heatsheild
+CoLOffset = 0.0, -0.36, 0.0 // as per stock 2.5m heatsheild
+// --- parameters ---
+TechRequired = landing
+entryCost = 1000
+cost = 475
+category = Thermal
+subcategory = 0
+title = #autoLOC_MRK_121
+manufacturer = #autoLOC_MRK_000
+description #autoLOC_MRK_122
+attachRules = 1,0,1,0,0
+mass = 0.666
+dragModelType = default
+maximum_drag = 0.2
+minimum_drag = 0.2
+angularDrag = 2
+breakingForce = 200
+breakingTorque = 200
+crashTolerance = 9
+maxTemp = 3400
+fuelCrossFeed = True // stock would be false but assume this is being used with Multi-Role Kapsule Service Module
+PhysicsSignificance = 0
+stageOffset = 1
+childStageOffset = 1
+bulkheadProfiles = size2
+thermalMassModifier = 1.0
+
+// --- Resources ---
+RESOURCE
+{
+    name = Ablator
+    amount = 800
+    maxAmount = 800
+}
+}
